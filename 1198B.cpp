@@ -7,7 +7,6 @@ int last1update[2 * 100000 + 1];
 int st[4 * 2 * 100000 + 1];
 int left(int p) { return p << 1; }
 int right(int p) { return (p << 1) + 1; }
-
 void updateTree(int p, int L, int R, int idx, int val) {
   if(idx < L || idx > R) return;
   if(L == idx && R == idx) {
@@ -19,6 +18,7 @@ void updateTree(int p, int L, int R, int idx, int val) {
     st[p] = max(p1,p2);
   }
 }
+
 int rmq(int p, int L, int R, int i, int j){
   if(i > R || j < L) return -1;
   if(L >= i && R <= j) return st[p];
