@@ -66,8 +66,18 @@ noremap <C-j> 5j
 noremap <C-k> 5k
 noremap <C-l> 5l
 noremap <C-h> 5h
-noremap <S-T> :w<CR>
+noremap <S-t> :w<CR>
 noremap <tab> <C-w><C-w>
+"nnoremap <S-k>    :resize -4<CR>
+"nnoremap <S-j>  :resize +4<CR>
+nnoremap <Up>    :resize -4<CR>
+nnoremap <Down>  :resize +4<CR>
+nnoremap <Left>  :vertical resize -2<CR>
+nnoremap <Right> :vertical resize +2<CR>
+"nnoremap <S-h>  :vertical resize -4<CR>
+"nnoremap <S-l> :vertical resize +4<CR>
+"nnoremap > :vertical resize +2<CR>
+"nnoremap < :vertical resize -2<CR>
 
  "insert mode remappings for brace autocomplete
  inoremap { {}<Esc>i
